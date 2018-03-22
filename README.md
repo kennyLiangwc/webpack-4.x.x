@@ -35,7 +35,7 @@
 ---
 
 ### sideEffects 设置
-###### webpack 4 在 package.json 中引入了对 sideEffects: false 的支持。当模块的 package.json 中添加该字段时，表明该模块没有副作用，也就意味着 webpack 可以安全地清除被用于重复导出(re-exports)的代码。
+##### webpack 4 在 package.json 中引入了对 sideEffects: false 的支持。当模块的 package.json 中添加该字段时，表明该模块没有副作用，也就意味着 webpack 可以安全地清除被用于重复导出(re-exports)的代码。
 
 ### 配置
 - 删除了一些常用内置插件：
