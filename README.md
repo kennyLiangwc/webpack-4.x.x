@@ -10,5 +10,15 @@
  运行 webpack -v 报错
   The CLI moved into a separate package: webpack-cli,please install 'webpack-cli' in addition to webpack itself to use the CLI
 ```
-  webpack4 将webpack相关命令行迁移到webpack-cli,需要另外安装 npm install webpack-cli -D
+#####  webpack4 将webpack相关命令行迁移到webpack-cli,需要另外安装 npm install webpack-cli -D
+
+2.安装完webpack-cli,运行webpack
+ ```
+ WARNING in configuration
+ The 'mode' option has not been set. Set 'mode' option to 'development' or 'production' to enable defaults for this emviroment. 
+ ```
+ ##### webpack4 需要配置mode模式
+ - development aaa
+ - production bbb
+ 
 ---
