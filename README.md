@@ -1,6 +1,10 @@
 # webpack-4.x.x
 
 测试构建时间降低了 60%-98%！！
+```
+ 开发环境 npm run dev
+ 测试环境 npm run build
+```
 
 ## webpack4 独立 webpack-cli，增加mode模式配置，提供了 5 种打包模块类型(javascript/auto,javascript/esm,javascript/dynamic,json,webassembly/experimental)，sideEffects 设置
 
