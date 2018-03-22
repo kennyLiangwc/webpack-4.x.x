@@ -1,5 +1,7 @@
 # webpack-4.x.x
 
+测试构建时间降低了 60%-98%！！
+
 ## webpack4 独立 webpack-cli，增加mode模式配置，提供了 5 种打包模块类型(javascript/auto,javascript/esm,javascript/dynamic,json,webassembly/experimental)，sideEffects 设置
 
 ### webpack4 初体验
@@ -37,4 +39,19 @@
 
 ### 配置
 - 删除了一些常用内置插件：
--- aaa
+   1. NoEmitOnErrorsPlugin -> optimization.noEmitOnErrors (生产模式默认)
+   2. ModuleConcatenationPlugin -> optimization.concatenateModules （生产模式默认）
+   3. NamedModulesPlugin -> optimization.namedModules （开发模式默认）。
+   4. 删除了 CommonsChunkPlugin，取而代之的是 optimization.splitChunks 和 optimization.runtimeChunk，这提供了细粒度的缓存策略控制
+- 默认配置
+   1. webpack 默认会按照 .wasm, .mjs, .js 和 .json 的扩展名顺序查找模块。
+   2. output.pathinfo 在开发模式下默认是打开的
+   3. 生产环境下，默认关闭内存缓存
+   4. entry 的默认值是 ./src，output.path 的默认值是 ./dist
+   5. 在选择模式选项时，默认值是 production
+   
+### 优化
+- uglifyjs-webpack-plugin 发布 v1，支持 ES2015
+- 使用 JSONP 数组来代替 JSONP 函数 –> 异步支持
+- webpack 自身也可以删除无用代码。webpack 2/3 中是在 Uglify 时删除无用代码，webpack 4 中 webpack 也可以(在某些情况下)删除无用代码，避免 import() 引用无用代码时导致的奔溃
+- 作用域提升后的模块将生成更少的代码
