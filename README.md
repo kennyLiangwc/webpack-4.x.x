@@ -22,9 +22,12 @@
  - 主要优化了增量构建速度和开发体验
  - process.env.NODE_ENV 的值不需要再定义，默认是 development
  - 开发模式下支持注释和提示，并且支持 eval 下的 source maps
+ - 运行时有用的错误消息
+ 
  2)production 模式
  - 默认提供所有可能的优化，如代码压缩/作用域提升等
  - 不支持 watching
  - process.env.NODE_ENV 的值不需要再定义，默认是 production
+ - 不公开源代码或文件路径
  
 ---
