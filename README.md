@@ -4,8 +4,11 @@
 
 ### webpack4 初体验
 ##### 安装最新版webpack
+---
 1. npm install webpack@bate -g 全局  npm intsll webpack@bate -D 局部
 ```
-  webpack -v
-  The CLI moved into a separate package: webpack-cli,please install 'webpack-cli' in addition to webpack itself to use the CLI
+ 运行 webpack -v 报错
+  The CLI moved into a separate package: webpack-cli,please install 'webpack-cli' in addition to webpack itself to use the CLI
 ```
+  webpack4 将webpack相关命令行迁移到webpack-cli,需要另外安装 npm install webpack-cli -D
+---
