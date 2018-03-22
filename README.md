@@ -17,8 +17,14 @@
  WARNING in configuration
  The 'mode' option has not been set. Set 'mode' option to 'development' or 'production' to enable defaults for this emviroment. 
  ```
- ##### webpack4 需要配置mode模式
- - development aaa
- - production bbb
+ ##### webpack4 需要配置mode模式. Mode,是我们为减小生产环境构建体积以及节约开发环境的构建时间提供的一种优化方案。
+ 1)development 模式
+ - 主要优化了增量构建速度和开发体验
+ - process.env.NODE_ENV 的值不需要再定义，默认是 development
+ - 开发模式下支持注释和提示，并且支持 eval 下的 source maps
+ 2)production 模式
+ - 默认提供所有可能的优化，如代码压缩/作用域提升等
+ - 不支持 watching
+ - process.env.NODE_ENV 的值不需要再定义，默认是 production
  
 ---
